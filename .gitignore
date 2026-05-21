@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pid
+*.tmp
+*.log
+
+# Do not upload experiment outputs by default.
+qwen2_5_vl/outputs/
+outputs/
+
+# Do not upload checkpoints or raw datasets.
+checkpoints/
+datasets/
+*.mp4
+*.avi
+*.mkv
