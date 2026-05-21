@@ -29,6 +29,76 @@ validate_activitynet_captions.py ActivityNet-Captions 验证入口
 [INFO] Loaded project-local Qwen2.5-VL modeling source: .../qwen2_5_vl/modeling_qwen2_5_vl.py
 ```
 
+## Adaptive 动态分配逻辑
+
+我们的做法是：总视觉 token 预算不变，只改变 token 在时间轴上的分布。
+
+baseline 是均匀抽帧：
+
+```text
+整条视频均匀采样 total_frames 帧
+```
+
+adaptive 是非均匀抽帧：
+
+```text
+先判断哪些 segment 更重要
+再给重要 segment 分配更多帧/token
+```
+
+具体流程：
+
+```text
+1. 将整条视频均匀切成 target_segments 个 segment。
+2. 每个 segment 单独抽 probe_nframes 帧送入模型。
+3. 对每个 segment 做 A/B probe，计算 logit_diff 和 entropy。
+4. 根据 logit_diff 和 entropy 给 segment 打分。
+5. 根据分数给不同 segment 分配不同帧数。
+6. 所有 segment 的帧数加起来仍然等于 total_frames。
+7. 用这些非均匀时间戳重新抽帧，统一送入模型做正式 temporal QA。
+```
+
+因此对比是公平的：
+
+```text
+baseline: 64 帧均匀分布在整条视频
+adaptive: 64 帧不均匀分布在不同 segment
+```
+
+这里的“动态分配视觉 token”在代码里表现为“动态分配帧数”。因为在固定 `final_square_size` 的情况下，一个时间段分到的帧越多，它对应的视觉 token 就越多。
+
+Charades-STA 当前使用：
+
+```text
+allocation_mode = logit_low_entropy
+```
+
+逻辑是先按 `logit_diff` 从高到低选候选 segment，再在候选里按 `entropy` 从低到高选更确定的 segment，被选中的 segment 优先获得额外帧预算。非 selected segment 仍然保留 `min_frames_per_segment` 帧，避免被完全饿死。
+
+ActivityNet-Captions 当前使用：
+
+```text
+allocation_mode = continuous
+entropy_direction = low
+```
+
+逻辑是不做硬 selected segment，而是每个 segment 都根据 `logit_diff` 和低 `entropy` 得到一个连续分数。分数越高，分到的帧越多；分数越低，也会保留 `min_frames_per_segment` 帧。ActivityNet 的事件区间通常更长，所以 continuous 分配比硬选择少数 segment 更稳定。
+
+最后，因为 adaptive 的帧不是均匀分布的，所以必须告诉模型每个 temporal grid 的真实时间位置。代码会构造：
+
+```python
+inputs["video_time_grid_ts"] = torch.tensor([grid_ts], dtype=torch.float32)
+```
+
+在 `modeling_qwen2_5_vl.py` 中，如果传入了 `video_time_grid_ts`，temporal RoPE 使用真实时间戳：
+
+```text
+temporal_position = round(real_timestamp_seconds * tokens_per_second)
+```
+
+如果不传 `video_time_grid_ts`，就回到原版 Qwen2.5-VL 的均匀时间位置逻辑。
+
+
 ## 环境
 
 当前服务器环境：
