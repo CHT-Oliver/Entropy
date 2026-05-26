@@ -1,0 +1,22 @@
+{
+  "sample_source": "activitynet_captions",
+  "used_samples": 5,
+  "missing_videos": 0,
+  "failures": 0,
+  "metric_denominator": "all successfully processed queries; unparsable predictions count as IoU 0",
+  "baseline": {
+    "samples": 5,
+    "mIoU": 0.4181228152832667,
+    "Recall@1_IoU=0.3": 0.4,
+    "Recall@1_IoU=0.5": 0.4,
+    "Recall@1_IoU=0.7": 0.2
+  },
+  "adaptive": {
+    "samples": 5,
+    "mIoU": 0.4038795720400235,
+    "Recall@1_IoU=0.3": 0.4,
+    "Recall@1_IoU=0.5": 0.4,
+    "Recall@1_IoU=0.7": 0.2
+  },
+  "details_jsonl": "outputs/qwen25vl_adaptive_temporal/tune_activitynet_n5_budget64_min2_details.jsonl"
+}

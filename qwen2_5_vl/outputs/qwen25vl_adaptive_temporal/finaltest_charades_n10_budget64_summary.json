@@ -1,0 +1,22 @@
+{
+  "sample_source": "charades_sta",
+  "used_samples": 10,
+  "missing_videos": 0,
+  "failures": 0,
+  "metric_denominator": "all successfully processed queries; unparsable predictions count as IoU 0",
+  "baseline": {
+    "samples": 10,
+    "mIoU": 0.28141679424802535,
+    "Recall@1_IoU=0.3": 0.3,
+    "Recall@1_IoU=0.5": 0.3,
+    "Recall@1_IoU=0.7": 0.1
+  },
+  "adaptive": {
+    "samples": 10,
+    "mIoU": 0.5567354260202289,
+    "Recall@1_IoU=0.3": 0.7,
+    "Recall@1_IoU=0.5": 0.7,
+    "Recall@1_IoU=0.7": 0.6
+  },
+  "details_jsonl": "outputs/qwen25vl_adaptive_temporal/finaltest_charades_n10_budget64_details.jsonl"
+}

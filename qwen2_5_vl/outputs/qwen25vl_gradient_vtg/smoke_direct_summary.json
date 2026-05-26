@@ -1,0 +1,34 @@
+{
+  "sample_source": "charades_sta",
+  "query_offset": 0,
+  "used_samples": 1,
+  "missing_videos": 0,
+  "failures": 0,
+  "config": {
+    "total_frames": 64,
+    "min_pixels": 3136,
+    "max_pixels": 12544,
+    "final_square_size": 112,
+    "aggregation": "topk_mean",
+    "topk_frac": 0.25,
+    "smooth_radius": 1,
+    "window_method": "connected_component",
+    "threshold_mode": "elbow",
+    "threshold_frac": 0.5,
+    "candidate_diff_frac": 0.95,
+    "fixed_window_bins": 8,
+    "min_window_bins": 1,
+    "max_window_bins": 0
+  },
+  "gradient_vtg": {
+    "samples": 1,
+    "mIoU": 0.0,
+    "Recall@1_IoU=0.3": 0.0,
+    "Recall@1_IoU=0.5": 0.0,
+    "Recall@1_IoU=0.7": 0.0,
+    "avg_pred_frac": 0.09375,
+    "avg_runtime_sec": 1.4990138869616203,
+    "max_peak_gpu_memory_mb": 19020.1943359375
+  },
+  "details_jsonl": "outputs/qwen25vl_gradient_vtg/smoke_direct_details.jsonl"
+}

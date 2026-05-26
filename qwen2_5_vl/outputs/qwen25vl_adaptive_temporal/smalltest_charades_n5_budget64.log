@@ -1,0 +1,48 @@
+[INFO] Loaded project-local Qwen2.5-VL modeling source: /ssd/cht/projects/entropy_exp/qwen2_5_vl/modeling_qwen2_5_vl.py
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:03,  1.33it/s]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.30it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.29it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.27it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:03<00:00,  1.59it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:03<00:00,  1.44it/s]
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.48, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+charades_sta:   0%|                                                                               | 0/5 [00:00<?, ?it/s]Keyword argument `min_pixels` is not a valid argument for this processor and will be ignored.
+Keyword argument `max_pixels` is not a valid argument for this processor and will be ignored.
+/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+charades_sta:   0%|                  | 0/5 [00:17<?, ?it/s, used=1, miss=0, fail=0, base_mIoU=0.2187, adapt_mIoU=0.0000]charades_sta:  20%|██        | 1/5 [00:17<01:11, 17.97s/it, used=1, miss=0, fail=0, base_mIoU=0.2187, adapt_mIoU=0.0000]/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+charades_sta:  20%|██        | 1/5 [00:35<01:11, 17.97s/it, used=2, miss=0, fail=0, base_mIoU=0.2187, adapt_mIoU=0.0650]charades_sta:  40%|████      | 2/5 [00:35<00:52, 17.48s/it, used=2, miss=0, fail=0, base_mIoU=0.2187, adapt_mIoU=0.0650]/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+charades_sta:  40%|████      | 2/5 [00:52<00:52, 17.48s/it, used=3, miss=0, fail=0, base_mIoU=0.1958, adapt_mIoU=0.0433]charades_sta:  60%|██████    | 3/5 [00:52<00:34, 17.30s/it, used=3, miss=0, fail=0, base_mIoU=0.1958, adapt_mIoU=0.0433]/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+charades_sta:  60%|██████    | 3/5 [01:09<00:34, 17.30s/it, used=4, miss=0, fail=0, base_mIoU=0.2019, adapt_mIoU=0.0875]charades_sta:  80%|████████  | 4/5 [01:09<00:17, 17.33s/it, used=4, miss=0, fail=0, base_mIoU=0.2019, adapt_mIoU=0.0875]/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+charades_sta:  80%|████████  | 4/5 [01:27<00:17, 17.33s/it, used=5, miss=0, fail=0, base_mIoU=0.2857, adapt_mIoU=0.1996]charades_sta: 100%|██████████| 5/5 [01:27<00:00, 17.37s/it, used=5, miss=0, fail=0, base_mIoU=0.2857, adapt_mIoU=0.1996]charades_sta: 100%|██████████| 5/5 [01:27<00:00, 17.40s/it, used=5, miss=0, fail=0, base_mIoU=0.2857, adapt_mIoU=0.1996]
+{
+  "sample_source": "charades_sta",
+  "used_samples": 5,
+  "missing_videos": 0,
+  "failures": 0,
+  "metric_denominator": "all successfully processed queries; unparsable predictions count as IoU 0",
+  "baseline": {
+    "samples": 5,
+    "mIoU": 0.28574242424242413,
+    "Recall@1_IoU=0.3": 0.2,
+    "Recall@1_IoU=0.5": 0.2,
+    "Recall@1_IoU=0.7": 0.0
+  },
+  "adaptive": {
+    "samples": 5,
+    "mIoU": 0.19960000000000003,
+    "Recall@1_IoU=0.3": 0.2,
+    "Recall@1_IoU=0.5": 0.2,
+    "Recall@1_IoU=0.7": 0.0
+  },
+  "details_jsonl": "outputs/qwen25vl_adaptive_temporal/smalltest_charades_n5_budget64_details.jsonl"
+}

@@ -1,0 +1,15 @@
+{
+  "sample_source": "activitynet_captions",
+  "used_samples": 300,
+  "missing_videos": 0,
+  "failures": 0,
+  "metric_denominator": "all successfully processed queries; unparsable predictions count as IoU 0",
+  "baseline": {
+    "samples": 300,
+    "mIoU": 0.24359186031473892,
+    "Recall@1_IoU=0.3": 0.32,
+    "Recall@1_IoU=0.5": 0.21,
+    "Recall@1_IoU=0.7": 0.12
+  },
+  "adaptive": null
+}

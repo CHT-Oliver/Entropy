@@ -1,0 +1,10 @@
+{
+  "charades_sta": {
+    "count": 500,
+    "out_dir": "outputs/qwen25vl_logit_entropy_vtg_500/bar_charts/charades_sta"
+  },
+  "activitynet_captions": {
+    "count": 500,
+    "out_dir": "outputs/qwen25vl_logit_entropy_vtg_500/bar_charts/activitynet_captions"
+  }
+}

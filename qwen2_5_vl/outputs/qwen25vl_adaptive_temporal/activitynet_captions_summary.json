@@ -1,0 +1,21 @@
+{
+  "sample_source": "activitynet_captions",
+  "used_samples": 1000,
+  "missing_videos": 0,
+  "failures": 0,
+  "metric_denominator": "all successfully processed queries; unparsable predictions count as IoU 0",
+  "baseline": {
+    "samples": 1000,
+    "mIoU": 0.26321157117339733,
+    "Recall@1_IoU=0.3": 0.342,
+    "Recall@1_IoU=0.5": 0.225,
+    "Recall@1_IoU=0.7": 0.13
+  },
+  "adaptive": {
+    "samples": 1000,
+    "mIoU": 0.2723035864845969,
+    "Recall@1_IoU=0.3": 0.365,
+    "Recall@1_IoU=0.5": 0.233,
+    "Recall@1_IoU=0.7": 0.131
+  }
+}

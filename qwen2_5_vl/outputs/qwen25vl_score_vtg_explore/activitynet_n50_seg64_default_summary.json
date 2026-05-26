@@ -1,0 +1,26 @@
+{
+  "sample_source": "activitynet_captions",
+  "used_samples": 50,
+  "missing_videos": 0,
+  "failures": 0,
+  "config": {
+    "target_segments": 64,
+    "segment_mode": "partition",
+    "probe_nframes": 2,
+    "score_mode": "logit_confidence",
+    "window_method": "max_subarray",
+    "threshold_mode": "mean",
+    "threshold_frac": 0.5,
+    "min_window_segments": 1,
+    "max_window_segments": 0,
+    "smooth_radius": 1
+  },
+  "score_vtg": {
+    "samples": 50,
+    "mIoU": 0.24376988569800087,
+    "Recall@1_IoU=0.3": 0.38,
+    "Recall@1_IoU=0.5": 0.22,
+    "Recall@1_IoU=0.7": 0.1
+  },
+  "details_jsonl": "outputs/qwen25vl_score_vtg_explore/activitynet_n50_seg64_default_details.jsonl"
+}

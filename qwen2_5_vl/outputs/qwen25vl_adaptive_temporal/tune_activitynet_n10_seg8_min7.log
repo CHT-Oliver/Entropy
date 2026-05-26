@@ -1,0 +1,68 @@
+[INFO] Loaded project-local Qwen2.5-VL modeling source: /ssd/cht/projects/entropy_exp/qwen2_5_vl/modeling_qwen2_5_vl.py
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:02,  1.41it/s]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.45it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.44it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:02<00:00,  1.43it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:03<00:00,  1.81it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:03<00:00,  1.62it/s]
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.48, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+activitynet_captions:   0%|                                                                      | 0/10 [00:00<?, ?it/s]Keyword argument `min_pixels` is not a valid argument for this processor and will be ignored.
+Keyword argument `max_pixels` is not a valid argument for this processor and will be ignored.
+/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+activitynet_captions:   0%|         | 0/10 [00:15<?, ?it/s, used=1, miss=0, fail=0, base_mIoU=0.9857, adapt_mIoU=0.9857]activitynet_captions:  10%| | 1/10 [00:15<02:22, 15.84s/it, used=1, miss=0, fail=0, base_mIoU=0.9857, adapt_mIoU=0.9857]/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+activitynet_captions:  10%| | 1/10 [00:31<02:22, 15.84s/it, used=2, miss=0, fail=0, base_mIoU=0.5629, adapt_mIoU=0.5629]activitynet_captions:  20%|▏| 2/10 [00:31<02:03, 15.48s/it, used=2, miss=0, fail=0, base_mIoU=0.5629, adapt_mIoU=0.5629]/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+activitynet_captions:  20%|▏| 2/10 [00:45<02:03, 15.48s/it, used=3, miss=0, fail=0, base_mIoU=0.6057, adapt_mIoU=0.6057]activitynet_captions:  30%|▎| 3/10 [00:45<01:45, 15.01s/it, used=3, miss=0, fail=0, base_mIoU=0.6057, adapt_mIoU=0.6057]/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+activitynet_captions:  30%|▎| 3/10 [01:00<01:45, 15.01s/it, used=4, miss=0, fail=0, base_mIoU=0.5227, adapt_mIoU=0.5227]activitynet_captions:  40%|▍| 4/10 [01:00<01:29, 14.89s/it, used=4, miss=0, fail=0, base_mIoU=0.5227, adapt_mIoU=0.5227]/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+activitynet_captions:  40%|▍| 4/10 [01:14<01:29, 14.89s/it, used=5, miss=0, fail=0, base_mIoU=0.4181, adapt_mIoU=0.4181]activitynet_captions:  50%|▌| 5/10 [01:14<01:13, 14.77s/it, used=5, miss=0, fail=0, base_mIoU=0.4181, adapt_mIoU=0.4181]/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+activitynet_captions:  50%|▌| 5/10 [01:29<01:13, 14.77s/it, used=6, miss=0, fail=0, base_mIoU=0.3931, adapt_mIoU=0.4181]activitynet_captions:  60%|▌| 6/10 [01:29<00:59, 14.75s/it, used=6, miss=0, fail=0, base_mIoU=0.3931, adapt_mIoU=0.4181]/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+activitynet_captions:  60%|▌| 6/10 [01:44<00:59, 14.75s/it, used=7, miss=0, fail=0, base_mIoU=0.3369, adapt_mIoU=0.4274]activitynet_captions:  70%|▋| 7/10 [01:44<00:44, 14.80s/it, used=7, miss=0, fail=0, base_mIoU=0.3369, adapt_mIoU=0.4274]/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+activitynet_captions:  70%|▋| 7/10 [01:59<00:44, 14.80s/it, used=8, miss=0, fail=0, base_mIoU=0.2948, adapt_mIoU=0.3663]activitynet_captions:  80%|▊| 8/10 [01:59<00:29, 14.86s/it, used=8, miss=0, fail=0, base_mIoU=0.2948, adapt_mIoU=0.3663]/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+activitynet_captions:  80%|▊| 8/10 [02:14<00:29, 14.86s/it, used=9, miss=0, fail=0, base_mIoU=0.3359, adapt_mIoU=0.4023]activitynet_captions:  90%|▉| 9/10 [02:14<00:14, 14.95s/it, used=9, miss=0, fail=0, base_mIoU=0.3359, adapt_mIoU=0.4023]/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/ssd/cht/anaconda3/envs/qwen25vl/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+activitynet_captions:  90%|▉| 9/10 [02:29<00:14, 14.95s/it, used=10, miss=0, fail=0, base_mIoU=0.3799, adapt_mIoU=0.3708activitynet_captions: 100%|█| 10/10 [02:29<00:00, 14.98s/it, used=10, miss=0, fail=0, base_mIoU=0.3799, adapt_mIoU=0.370activitynet_captions: 100%|█| 10/10 [02:29<00:00, 14.96s/it, used=10, miss=0, fail=0, base_mIoU=0.3799, adapt_mIoU=0.370
+{
+  "sample_source": "activitynet_captions",
+  "used_samples": 10,
+  "missing_videos": 0,
+  "failures": 0,
+  "metric_denominator": "all successfully processed queries; unparsable predictions count as IoU 0",
+  "baseline": {
+    "samples": 10,
+    "mIoU": 0.3799319064946195,
+    "Recall@1_IoU=0.3": 0.4,
+    "Recall@1_IoU=0.5": 0.4,
+    "Recall@1_IoU=0.7": 0.2
+  },
+  "adaptive": {
+    "samples": 10,
+    "mIoU": 0.33375207670090284,
+    "Recall@1_IoU=0.3": 0.4,
+    "Recall@1_IoU=0.5": 0.3,
+    "Recall@1_IoU=0.7": 0.1
+  },
+  "details_jsonl": "outputs/qwen25vl_adaptive_temporal/tune_activitynet_n10_seg8_min7_details.jsonl"
+}

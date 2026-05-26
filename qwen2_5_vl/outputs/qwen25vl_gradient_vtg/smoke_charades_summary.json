@@ -1,0 +1,33 @@
+{
+  "sample_source": "charades_sta",
+  "used_samples": 1,
+  "missing_videos": 0,
+  "failures": 0,
+  "config": {
+    "total_frames": 16,
+    "min_pixels": 3136,
+    "max_pixels": 3136,
+    "final_square_size": 56,
+    "aggregation": "topk_mean",
+    "topk_frac": 0.25,
+    "smooth_radius": 1,
+    "window_method": "connected_component",
+    "threshold_mode": "elbow",
+    "threshold_frac": 0.5,
+    "candidate_diff_frac": 0.95,
+    "fixed_window_bins": 8,
+    "min_window_bins": 1,
+    "max_window_bins": 0
+  },
+  "gradient_vtg": {
+    "samples": 1,
+    "mIoU": 0.5231785239504264,
+    "Recall@1_IoU=0.3": 1.0,
+    "Recall@1_IoU=0.5": 1.0,
+    "Recall@1_IoU=0.7": 0.0,
+    "avg_pred_frac": 0.37500000000000006,
+    "avg_runtime_sec": 1.1801511149969883,
+    "max_peak_gpu_memory_mb": 16397.02099609375
+  },
+  "details_jsonl": "outputs/qwen25vl_gradient_vtg/smoke_charades_details.jsonl"
+}

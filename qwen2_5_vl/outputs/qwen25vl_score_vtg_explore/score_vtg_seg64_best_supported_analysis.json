@@ -1,0 +1,120 @@
+{
+  "charades_sta": {
+    "mIoU": 0.4229396956862639,
+    "R03": 0.62,
+    "R05": 0.34,
+    "R07": 0.18,
+    "avg_gt_len": 8.257999999999996,
+    "avg_pred_len": 10.700760000000002,
+    "avg_gt_frac": 0.280720383716931,
+    "avg_pred_frac": 0.35968764386998053,
+    "avg_selected_segments": 23.02,
+    "median_selected_segments": 18.0,
+    "peak_segment_overlaps_gt_rate": 0.66,
+    "peak_segment_avg_iou": 0.035228356620357566,
+    "pred_fully_covers_gt_rate": 0.16,
+    "examples": [
+      {
+        "sample_id": "charades_0000_3MSZA",
+        "gt": [
+          24.3,
+          30.4
+        ],
+        "pred": [
+          0.0,
+          24.776
+        ],
+        "iou": 0.015657894736842076,
+        "selected_segments": 51,
+        "peak_idx": 3
+      },
+      {
+        "sample_id": "charades_0001_3MSZA",
+        "gt": [
+          24.3,
+          30.4
+        ],
+        "pred": [
+          25.262,
+          27.206
+        ],
+        "iou": 0.3186885245901639,
+        "selected_segments": 4,
+        "peak_idx": 52
+      },
+      {
+        "sample_id": "charades_0002_3MSZA",
+        "gt": [
+          24.3,
+          30.4
+        ],
+        "pred": [
+          0.972,
+          24.776
+        ],
+        "iou": 0.016175071360608913,
+        "selected_segments": 49,
+        "peak_idx": 26
+      }
+    ]
+  },
+  "activitynet_captions": {
+    "mIoU": 0.31649502523711903,
+    "R03": 0.44,
+    "R05": 0.22,
+    "R07": 0.08,
+    "avg_gt_len": 30.005999999999993,
+    "avg_pred_len": 91.98598,
+    "avg_gt_frac": 0.29732246163164766,
+    "avg_pred_frac": 0.8318751480824111,
+    "avg_selected_segments": 53.24,
+    "median_selected_segments": 64.0,
+    "peak_segment_overlaps_gt_rate": 0.38,
+    "peak_segment_avg_iou": 0.01714858458272438,
+    "pred_fully_covers_gt_rate": 0.86,
+    "examples": [
+      {
+        "sample_id": "activitynet_val1_0000_v_uqiMw7tQ1Cc_0",
+        "gt": [
+          0.28,
+          55.15
+        ],
+        "pred": [
+          0.0,
+          55.667
+        ],
+        "iou": 0.9856827204627516,
+        "selected_segments": 64,
+        "peak_idx": 61
+      },
+      {
+        "sample_id": "activitynet_val1_0001_v_uqiMw7tQ1Cc_1",
+        "gt": [
+          13.79,
+          54.32
+        ],
+        "pred": [
+          11.307,
+          33.052
+        ],
+        "iou": 0.44781810150419643,
+        "selected_segments": 25,
+        "peak_idx": 18
+      },
+      {
+        "sample_id": "activitynet_val1_0002_v_bXdq2zI1Ms0_0",
+        "gt": [
+          0.0,
+          10.23
+        ],
+        "pred": [
+          0.0,
+          73.334
+        ],
+        "iou": 0.13949873182971065,
+        "selected_segments": 64,
+        "peak_idx": 38
+      }
+    ]
+  }
+}

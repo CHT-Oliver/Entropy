@@ -1,0 +1,33 @@
+{
+  "sample_source": "activitynet_captions",
+  "used_samples": 50,
+  "missing_videos": 0,
+  "failures": 0,
+  "config": {
+    "total_frames": 64,
+    "min_pixels": 3136,
+    "max_pixels": 12544,
+    "final_square_size": 112,
+    "aggregation": "topk_mean",
+    "topk_frac": 0.25,
+    "smooth_radius": 1,
+    "window_method": "connected_component",
+    "threshold_mode": "elbow",
+    "threshold_frac": 0.5,
+    "candidate_diff_frac": 0.95,
+    "fixed_window_bins": 8,
+    "min_window_bins": 1,
+    "max_window_bins": 0
+  },
+  "gradient_vtg": {
+    "samples": 50,
+    "mIoU": 0.22973227598099824,
+    "Recall@1_IoU=0.3": 0.3,
+    "Recall@1_IoU=0.5": 0.18,
+    "Recall@1_IoU=0.7": 0.06,
+    "avg_pred_frac": 0.183125,
+    "avg_runtime_sec": 0.4908809851587284,
+    "max_peak_gpu_memory_mb": 19174.6982421875
+  },
+  "details_jsonl": "outputs/qwen25vl_gradient_vtg/compare_activitynet_gradient_n50_details.jsonl"
+}

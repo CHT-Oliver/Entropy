@@ -1,0 +1,26 @@
+{
+  "sample_source": "activitynet_captions",
+  "used_samples": 500,
+  "missing_videos": 0,
+  "failures": 0,
+  "config": {
+    "target_segments": 64,
+    "segment_mode": "partition",
+    "probe_nframes": 2,
+    "score_mode": "norm_logit_low_entropy",
+    "window_method": "threshold_expand",
+    "threshold_mode": "max_frac",
+    "threshold_frac": 0.4,
+    "min_window_segments": 1,
+    "max_window_segments": 0,
+    "smooth_radius": 1
+  },
+  "score_vtg": {
+    "samples": 500,
+    "mIoU": 0.31594753020441196,
+    "Recall@1_IoU=0.3": 0.436,
+    "Recall@1_IoU=0.5": 0.226,
+    "Recall@1_IoU=0.7": 0.11
+  },
+  "details_jsonl": "outputs/qwen25vl_logit_entropy_vtg_500/activitynet_n500_probe_seg64_details.jsonl"
+}

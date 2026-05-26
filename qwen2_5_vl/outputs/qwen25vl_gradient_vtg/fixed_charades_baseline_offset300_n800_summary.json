@@ -1,0 +1,20 @@
+{
+  "sample_source": "charades_sta",
+  "query_offset": 300,
+  "used_samples": 800,
+  "missing_videos": 0,
+  "failures": 0,
+  "metric_denominator": "all successfully processed queries; unparsable predictions count as IoU 0",
+  "baseline": {
+    "samples": 800,
+    "mIoU": 0.3650459114363172,
+    "Recall@1_IoU=0.3": 0.55125,
+    "Recall@1_IoU=0.5": 0.3625,
+    "Recall@1_IoU=0.7": 0.18375
+  },
+  "adaptive": null,
+  "shards": [
+    "outputs/qwen25vl_gradient_vtg/fixed_charades_baseline_offset300_n800_shard0_summary.json",
+    "outputs/qwen25vl_gradient_vtg/fixed_charades_baseline_offset300_n800_shard1_summary.json"
+  ]
+}

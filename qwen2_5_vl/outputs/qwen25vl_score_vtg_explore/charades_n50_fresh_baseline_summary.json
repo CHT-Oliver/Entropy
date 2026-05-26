@@ -1,0 +1,15 @@
+{
+  "sample_source": "charades_sta",
+  "used_samples": 50,
+  "missing_videos": 0,
+  "failures": 0,
+  "metric_denominator": "all successfully processed queries; unparsable predictions count as IoU 0",
+  "baseline": {
+    "samples": 50,
+    "mIoU": 0.45886538417292266,
+    "Recall@1_IoU=0.3": 0.6,
+    "Recall@1_IoU=0.5": 0.5,
+    "Recall@1_IoU=0.7": 0.3
+  },
+  "adaptive": null
+}
