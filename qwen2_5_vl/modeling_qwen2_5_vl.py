@@ -1810,6 +1810,9 @@ class Qwen2_5_VLForConditionalGeneration(Qwen2_5_VLPreTrainedModel, GenerationMi
         )
         return_dict = return_dict if return_dict is not None else self.config.use_return_dict
 
+        if getattr(self, "_qwen25vl_capture_video_grads", False):
+            self._qwen25vl_last_video_embeds = None
+
         if inputs_embeds is None:
             inputs_embeds = self.model.embed_tokens(input_ids)
             if pixel_values is not None:
@@ -1846,6 +1849,9 @@ class Qwen2_5_VLForConditionalGeneration(Qwen2_5_VLPreTrainedModel, GenerationMi
                 video_mask = mask_expanded.to(inputs_embeds.device)
 
                 video_embeds = video_embeds.to(inputs_embeds.device, inputs_embeds.dtype)
+                if getattr(self, "_qwen25vl_capture_video_grads", False):
+                    video_embeds = video_embeds.detach().requires_grad_(True)
+                    self._qwen25vl_last_video_embeds = video_embeds
                 inputs_embeds = inputs_embeds.masked_scatter(video_mask, video_embeds)
 
             if attention_mask is not None:

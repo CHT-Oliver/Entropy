@@ -55,6 +55,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--device", default="cuda")
     parser.add_argument("--attn-implementation", default="sdpa")
     parser.add_argument("--mode", choices=["baseline", "adaptive", "both"], default="both")
+    parser.add_argument("--sample-offset", type=int, default=0)
     parser.add_argument("--max-samples", type=int, default=None)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--max-new-tokens", type=int, default=32)
@@ -1016,6 +1017,9 @@ def run_validation(
         if args.samples_jsonl is None:
             raise ValueError("Either pass --samples-jsonl or call run_validation(..., samples=...).")
         samples = read_jsonl(args.samples_jsonl)
+    sample_offset = max(0, int(getattr(args, "sample_offset", 0) or 0))
+    if sample_offset:
+        samples = samples[sample_offset:]
     if args.max_samples is not None:
         samples = samples[: args.max_samples]
 
@@ -1090,6 +1094,7 @@ def run_validation(
 
     summary = {
         "sample_source": sample_source,
+        "sample_offset": sample_offset,
         "used_samples": used,
         "missing_videos": missing_video,
         "failures": failures,

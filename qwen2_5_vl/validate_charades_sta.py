@@ -43,6 +43,7 @@ def parse_dataset_args(argv: list[str] | None = None) -> tuple[argparse.Namespac
     parser = argparse.ArgumentParser(add_help=False)
     parser.add_argument("--annotation", type=Path, default=DEFAULT_ANNOTATION)
     parser.add_argument("--video-root", type=Path, default=DEFAULT_VIDEO_ROOT)
+    parser.add_argument("--query-offset", type=int, default=0)
     parser.add_argument("--num-queries", type=int, default=None)
     return parser.parse_known_args(argv)
 
@@ -72,6 +73,7 @@ def main(argv: list[str] | None = None) -> None:
     dataset_args, remaining = parse_dataset_args(argv)
     args = core.parse_args(config_to_args(DEFAULT_CONFIG) + remaining)
     args.samples_jsonl = None
+    args.sample_offset = max(0, int(dataset_args.query_offset or 0))
     if dataset_args.num_queries is not None:
         args.max_samples = dataset_args.num_queries
     elif args.max_samples is None:
